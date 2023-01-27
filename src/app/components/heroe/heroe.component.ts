@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-heroe',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroeComponent implements OnInit {
 
-  constructor() { }
+  heroeForm!: FormGroup
+
+  constructor( private fb: FormBuilder) { 
+
+    this.crearFormulario();
+  }
 
   ngOnInit(): void {
+  }
+
+  crearFormulario(){
+    this.heroeForm = this.fb.group({
+      nombre: ['', Validators.required],
+      poder: [''],
+      vivo: [''],
+      tools: ['']
+    })
   }
 
 }
