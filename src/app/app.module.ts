@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
